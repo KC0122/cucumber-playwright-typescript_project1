@@ -52,12 +52,10 @@ Before you clone the repo, install following dependencies
          
          Visit https://playwright.dev/docs/intro for more information. ✨
         
--Issue   npx playwright test  command, and you will see 2 tests are passing!
-           
-           Happy hacking! 🎭
-
-
-       
+- Issue the below command, and you will see 2 tests are passing!
+       npx playwright test          
+          
+        
 -In addition, you also need to follow the below steps
          -Need to install cucumber from npm library
          -Install ts-node from NPM library
