@@ -57,10 +57,16 @@ Before you clone the repo, install following dependencies
           
         
 -In addition, you also need to follow the below steps
+         -Install Cucumber extension for the VSCode -done!
+
          -Need to install cucumber from npm library
+             npm i @cucumber/cucumber
+
          -Install ts-node from NPM library
-         -Create the folder strsucture
-         -Create Cucumber.json file at the root directory
+              npm i ts-node
+         -Create the folder strsucture -done!
+         -Create Cucumber.json file at the root directory -done!
+
 
     
 -To open the report issue the below command
@@ -69,9 +75,18 @@ Before you clone the repo, install following dependencies
   
 ***********************************************************
  Lessons Learned
-**************************************************************
--With below 3 lines, you can launch browsers with seperate contexts
-  brows  = await chromium.launch(); 
-  browcntx1 = await brows.newContext();
-  page = await browcntx1.newPage();
 
+
+VSCode error in the terminal  for the NPM Command:
+
+Nodejs\npm.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170. 
+At line:1 char:1
+
+
+To fix this issue:
+Open Powershell in admin mode and enter below command
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+
+-Re-start your VS Code.Issue  npm -v command
+ Now it should show you the same version number in the VS Terminal too!
