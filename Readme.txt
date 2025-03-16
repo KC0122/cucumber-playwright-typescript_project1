@@ -1,6 +1,6 @@
----Project(2).Playwright Basics With Hooks--
+---  Playwright-Cucumber-Typescript-Project1
 
-Purpose: Same as Project(1) solution(i.e, https://github.com/KC0122/playwright-core-project1.git)
+Purpose: The very first demo project with Playwright + Cucumber + Typescript(i.e,git@github.com:KC0122/cucumber-playwright-typescript_project1.git)
 
 i.e,
 -Launch a browser
@@ -56,6 +56,15 @@ Before you clone the repo, install following dependencies
            
            Happy hacking! 🎭
 
+
+       
+-In addition, you also need to follow the below steps
+         -Need to install cucumber from npm library
+         -Install ts-node from NPM library
+         -Create the folder strsucture
+         -Create Cucumber.json file at the root directory
+
+    
 -To open the report issue the below command
    npx playwright show-report!
 
