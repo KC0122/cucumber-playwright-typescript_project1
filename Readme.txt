@@ -95,15 +95,58 @@ Before you clone the repo, install following dependencies
      npm run test
    
     
--To open the report issue the below command
-   npx playwright show-report!
-
   
 ***********************************************************
  Lessons Learned
+************************************************************
+
+1).Feature File Error Fixing!
+
+if you ever, encountered Feature file  steps undefined error,
+even after you have clearly defined them all,
+
+Steps to fix the problem:
+
+Press Ctrl + comma button 
+You will see now the settingd screen has opened
+In the search bar, type cucumber
+Click on Edit in settings.json
+
+Now you will see something like below
+
+  "cucumber.features": [
+    "src/test/**/*.feature",
+    "features/**/*.feature",
+    "tests/**/*.feature",
+    "*specs*/**/*.feature"
+  ]
+  
+  Make sure you delete above and paste the exact like for like details from Cucumber.json, as per below
+  
+  
+  "cucumber.features": [
+    "src/test/features/*.feature"
+  ]
+  
+And do the same for Cucumber.glue section..This detail should match with Cucumber.json's require value(i.e,stepdefinition path
+
+  "cucumber.glue": [
+    "src/test/steps/*.ts"
+  ]
+   
+  Once saved these changes, close all files and the VSCode, and re-open!
+  -Now you will see that the "Feature" file's error has disappeared!
+  If you issue below command, the feature file will be executed along with the step definitions!
+  
+  npm run test
+  
+  
 
 
-VSCode error in the terminal  for the NPM Command:
+
+
+
+2).VSCode error in the terminal  for the NPM Command:
 
 Nodejs\npm.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170. 
 At line:1 char:1
