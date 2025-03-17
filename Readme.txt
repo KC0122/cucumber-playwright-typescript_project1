@@ -67,7 +67,33 @@ Before you clone the repo, install following dependencies
          -Create the folder strsucture -done!
          -Create Cucumber.json file at the root directory -done!
 
+         ex:
+         {
+        "default": {
+        "paths": ["src/test/features/*.feature"],
+        "publishQuite":true,
+        "dryRun":false,
+        "require": ["testssrc/test/steps/*.ts"],
+         "requireModule":["ts-node/register"]        
+                   }
+         }
 
+
+   -Also,make sure to update the "Script" section of Package.json as per below.
+        
+        ;;;
+        .....
+      
+       "scripts":{
+          "test" : "cucumber-js test"
+        },
+
+      ...
+      --
+
+-To run the Cucumber tests, issue below command
+     npm run test
+   
     
 -To open the report issue the below command
    npx playwright show-report!
